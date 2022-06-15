@@ -48,12 +48,9 @@ namespace BOP3___Task1
 
 		private void ExitButton_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Application.Exit();
 		}
 
-		private void Password_Click(object sender, EventArgs e)
-		{
 
-		}
 	}
 }

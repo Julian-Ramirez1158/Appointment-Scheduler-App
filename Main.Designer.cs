@@ -31,8 +31,8 @@ namespace BOP3___Task1
 		{
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.CustomerGroupBox = new System.Windows.Forms.GroupBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.AddCustButton = new System.Windows.Forms.Button();
+			this.ModifyCustButton = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.button4 = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@ namespace BOP3___Task1
 			this.button8 = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
 			this.button10 = new System.Windows.Forms.Button();
-			this.button11 = new System.Windows.Forms.Button();
+			this.LogoffButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.CustomerGroupBox.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -64,8 +64,8 @@ namespace BOP3___Task1
 			// 
 			this.CustomerGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.CustomerGroupBox.Controls.Add(this.button3);
-			this.CustomerGroupBox.Controls.Add(this.button2);
-			this.CustomerGroupBox.Controls.Add(this.button1);
+			this.CustomerGroupBox.Controls.Add(this.ModifyCustButton);
+			this.CustomerGroupBox.Controls.Add(this.AddCustButton);
 			this.CustomerGroupBox.Controls.Add(this.dataGridView1);
 			this.CustomerGroupBox.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.CustomerGroupBox.Location = new System.Drawing.Point(39, 30);
@@ -75,25 +75,27 @@ namespace BOP3___Task1
 			this.CustomerGroupBox.TabStop = false;
 			this.CustomerGroupBox.Text = "Customers";
 			// 
-			// button1
+			// AddCustButton
 			// 
-			this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(347, 277);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(80, 29);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Add";
-			this.button1.UseVisualStyleBackColor = true;
+			this.AddCustButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.AddCustButton.Location = new System.Drawing.Point(347, 277);
+			this.AddCustButton.Name = "AddCustButton";
+			this.AddCustButton.Size = new System.Drawing.Size(80, 29);
+			this.AddCustButton.TabIndex = 1;
+			this.AddCustButton.Text = "Add";
+			this.AddCustButton.UseVisualStyleBackColor = true;
+			this.AddCustButton.Click += new System.EventHandler(this.AddCustButton_Click);
 			// 
-			// button2
+			// ModifyCustButton
 			// 
-			this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(433, 277);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(80, 29);
-			this.button2.TabIndex = 2;
-			this.button2.Text = "Modify";
-			this.button2.UseVisualStyleBackColor = true;
+			this.ModifyCustButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ModifyCustButton.Location = new System.Drawing.Point(433, 277);
+			this.ModifyCustButton.Name = "ModifyCustButton";
+			this.ModifyCustButton.Size = new System.Drawing.Size(80, 29);
+			this.ModifyCustButton.TabIndex = 2;
+			this.ModifyCustButton.Text = "Modify";
+			this.ModifyCustButton.UseVisualStyleBackColor = true;
+			this.ModifyCustButton.Click += new System.EventHandler(this.ModifyCustButton_Click);
 			// 
 			// button3
 			// 
@@ -161,7 +163,7 @@ namespace BOP3___Task1
 			// groupBox2
 			// 
 			this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.groupBox2.Controls.Add(this.button11);
+			this.groupBox2.Controls.Add(this.LogoffButton);
 			this.groupBox2.Controls.Add(this.button10);
 			this.groupBox2.Controls.Add(this.button9);
 			this.groupBox2.Controls.Add(this.button8);
@@ -214,15 +216,16 @@ namespace BOP3___Task1
 			this.button10.Text = "Report 3";
 			this.button10.UseVisualStyleBackColor = true;
 			// 
-			// button11
+			// LogoffButton
 			// 
-			this.button11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button11.Location = new System.Drawing.Point(63, 398);
-			this.button11.Name = "button11";
-			this.button11.Size = new System.Drawing.Size(182, 51);
-			this.button11.TabIndex = 4;
-			this.button11.Text = "Log Off";
-			this.button11.UseVisualStyleBackColor = true;
+			this.LogoffButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LogoffButton.Location = new System.Drawing.Point(63, 398);
+			this.LogoffButton.Name = "LogoffButton";
+			this.LogoffButton.Size = new System.Drawing.Size(182, 51);
+			this.LogoffButton.TabIndex = 4;
+			this.LogoffButton.Text = "Log Off";
+			this.LogoffButton.UseVisualStyleBackColor = true;
+			this.LogoffButton.Click += new System.EventHandler(this.LogoffButton_Click);
 			// 
 			// Main
 			// 
@@ -249,8 +252,8 @@ namespace BOP3___Task1
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.GroupBox CustomerGroupBox;
 		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button ModifyCustButton;
+		private System.Windows.Forms.Button AddCustButton;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button5;
@@ -261,6 +264,6 @@ namespace BOP3___Task1
 		private System.Windows.Forms.Button button9;
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Button button7;
-		private System.Windows.Forms.Button button11;
+		private System.Windows.Forms.Button LogoffButton;
 	}
 }

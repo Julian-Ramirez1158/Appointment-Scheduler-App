@@ -103,7 +103,6 @@ namespace BOP3___Task1
 			this.Password.Size = new System.Drawing.Size(92, 18);
 			this.Password.TabIndex = 1;
 			this.Password.Text = "Password:";
-			this.Password.Click += new System.EventHandler(this.Password_Click);
 			// 
 			// Login
 			// 

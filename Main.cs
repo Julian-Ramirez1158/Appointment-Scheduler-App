@@ -17,11 +17,24 @@ namespace BOP3___Task1
 			InitializeComponent();
 		}
 
-		private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void LogoffButton_Click(object sender, EventArgs e)
 		{
-
+			this.Hide();
+			new Login().ShowDialog();
 		}
 
+		private void AddCustButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			new AddCustomer().ShowDialog();
+			this.Show();
+		}
 
+		private void ModifyCustButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			new ModifyCustomer().ShowDialog();
+			this.Show();
+		}
 	}
 }
