@@ -36,5 +36,12 @@ namespace BOP3___Task1
 			new ModifyCustomer().ShowDialog();
 			this.Show();
 		}
+
+		private void AddAppointmentButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			new AddAppointment().ShowDialog();
+			this.Show();
+		}
 	}
 }
