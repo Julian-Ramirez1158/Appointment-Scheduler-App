@@ -51,6 +51,7 @@ namespace BOP3___Task1
 			this.tabControl1.Controls.Add(this.AllTab);
 			this.tabControl1.Controls.Add(this.WeeklyTab);
 			this.tabControl1.Controls.Add(this.MonthlyTab);
+			this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tabControl1.Location = new System.Drawing.Point(28, 22);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
@@ -60,10 +61,10 @@ namespace BOP3___Task1
 			// AllTab
 			// 
 			this.AllTab.Controls.Add(this.dataGridView1);
-			this.AllTab.Location = new System.Drawing.Point(4, 22);
+			this.AllTab.Location = new System.Drawing.Point(4, 25);
 			this.AllTab.Name = "AllTab";
 			this.AllTab.Padding = new System.Windows.Forms.Padding(3);
-			this.AllTab.Size = new System.Drawing.Size(737, 377);
+			this.AllTab.Size = new System.Drawing.Size(737, 374);
 			this.AllTab.TabIndex = 0;
 			this.AllTab.Text = "All";
 			this.AllTab.UseVisualStyleBackColor = true;

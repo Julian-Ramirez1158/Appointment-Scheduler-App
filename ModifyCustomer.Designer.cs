@@ -270,10 +270,12 @@ namespace BOP3___Task1
 			// 
 			// textBox1
 			// 
+			this.textBox1.Enabled = false;
 			this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox1.Location = new System.Drawing.Point(221, 65);
 			this.textBox1.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox1.Name = "textBox1";
+			this.textBox1.ReadOnly = true;
 			this.textBox1.Size = new System.Drawing.Size(180, 23);
 			this.textBox1.TabIndex = 0;
 			// 
