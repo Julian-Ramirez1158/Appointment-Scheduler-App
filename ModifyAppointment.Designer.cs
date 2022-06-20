@@ -1,7 +1,7 @@
 ﻿
 namespace BOP3___Task1
 {
-	partial class AddAppointment
+	partial class ModifyAppointment
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -85,12 +85,12 @@ namespace BOP3___Task1
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.textBox1);
 			this.groupBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox1.Location = new System.Drawing.Point(47, 27);
+			this.groupBox1.Location = new System.Drawing.Point(47, 31);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(446, 557);
-			this.groupBox1.TabIndex = 1;
+			this.groupBox1.TabIndex = 2;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Add Appointment";
+			this.groupBox1.Text = "Modify Appointment";
 			// 
 			// dateTimePicker1
 			// 
@@ -227,7 +227,7 @@ namespace BOP3___Task1
 			this.textBox8.Location = new System.Drawing.Point(221, 328);
 			this.textBox8.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(180, 23);
+			this.textBox8.Size = new System.Drawing.Size(180, 20);
 			this.textBox8.TabIndex = 12;
 			// 
 			// textBox7
@@ -236,7 +236,7 @@ namespace BOP3___Task1
 			this.textBox7.Location = new System.Drawing.Point(221, 289);
 			this.textBox7.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(180, 23);
+			this.textBox7.Size = new System.Drawing.Size(180, 20);
 			this.textBox7.TabIndex = 11;
 			// 
 			// textBox6
@@ -245,7 +245,7 @@ namespace BOP3___Task1
 			this.textBox6.Location = new System.Drawing.Point(221, 252);
 			this.textBox6.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(180, 23);
+			this.textBox6.Size = new System.Drawing.Size(180, 20);
 			this.textBox6.TabIndex = 10;
 			// 
 			// textBox5
@@ -254,7 +254,7 @@ namespace BOP3___Task1
 			this.textBox5.Location = new System.Drawing.Point(221, 214);
 			this.textBox5.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(180, 23);
+			this.textBox5.Size = new System.Drawing.Size(180, 20);
 			this.textBox5.TabIndex = 9;
 			// 
 			// textBox4
@@ -263,7 +263,7 @@ namespace BOP3___Task1
 			this.textBox4.Location = new System.Drawing.Point(221, 177);
 			this.textBox4.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(180, 23);
+			this.textBox4.Size = new System.Drawing.Size(180, 20);
 			this.textBox4.TabIndex = 8;
 			// 
 			// label4
@@ -282,7 +282,7 @@ namespace BOP3___Task1
 			this.textBox3.Location = new System.Drawing.Point(221, 139);
 			this.textBox3.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(180, 23);
+			this.textBox3.Size = new System.Drawing.Size(180, 20);
 			this.textBox3.TabIndex = 6;
 			// 
 			// textBox2
@@ -291,7 +291,7 @@ namespace BOP3___Task1
 			this.textBox2.Location = new System.Drawing.Point(221, 102);
 			this.textBox2.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(180, 23);
+			this.textBox2.Size = new System.Drawing.Size(180, 20);
 			this.textBox2.TabIndex = 5;
 			// 
 			// label3
@@ -330,18 +330,18 @@ namespace BOP3___Task1
 			this.textBox1.Location = new System.Drawing.Point(221, 65);
 			this.textBox1.MaximumSize = new System.Drawing.Size(180, 20);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(180, 23);
+			this.textBox1.Size = new System.Drawing.Size(180, 20);
 			this.textBox1.TabIndex = 0;
 			// 
-			// AddAppointment
+			// ModifyAppointment
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(540, 618);
 			this.Controls.Add(this.groupBox1);
-			this.Name = "AddAppointment";
-			this.Text = "AddAppointment";
+			this.Name = "ModifyAppointment";
+			this.Text = "ModifyAppointment";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
@@ -351,6 +351,12 @@ namespace BOP3___Task1
 		#endregion
 
 		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.DateTimePicker dateTimePicke3;
+		private System.Windows.Forms.DateTimePicker dateTimePicker2;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Button CancelButton;
 		private System.Windows.Forms.Button SaveButton;
 		private System.Windows.Forms.Label label8;
@@ -369,11 +375,5 @@ namespace BOP3___Task1
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.DateTimePicker dateTimePicker2;
-		private System.Windows.Forms.DateTimePicker dateTimePicke3;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private System.Windows.Forms.Label label9;
 	}
 }

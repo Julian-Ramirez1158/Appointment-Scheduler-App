@@ -36,11 +36,11 @@ namespace BOP3___Task1
 			this.button3 = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
+			this.ModifyAppointmentButton = new System.Windows.Forms.Button();
 			this.AddAppointmentButton = new System.Windows.Forms.Button();
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.button7 = new System.Windows.Forms.Button();
+			this.CalendarView = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
 			this.button10 = new System.Windows.Forms.Button();
@@ -111,7 +111,7 @@ namespace BOP3___Task1
 			// 
 			this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.groupBox1.Controls.Add(this.button4);
-			this.groupBox1.Controls.Add(this.button5);
+			this.groupBox1.Controls.Add(this.ModifyAppointmentButton);
 			this.groupBox1.Controls.Add(this.AddAppointmentButton);
 			this.groupBox1.Controls.Add(this.dataGridView2);
 			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,15 +132,16 @@ namespace BOP3___Task1
 			this.button4.Text = "Delete";
 			this.button4.UseVisualStyleBackColor = true;
 			// 
-			// button5
+			// ModifyAppointmentButton
 			// 
-			this.button5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(433, 277);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(80, 29);
-			this.button5.TabIndex = 2;
-			this.button5.Text = "Modify";
-			this.button5.UseVisualStyleBackColor = true;
+			this.ModifyAppointmentButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ModifyAppointmentButton.Location = new System.Drawing.Point(433, 277);
+			this.ModifyAppointmentButton.Name = "ModifyAppointmentButton";
+			this.ModifyAppointmentButton.Size = new System.Drawing.Size(80, 29);
+			this.ModifyAppointmentButton.TabIndex = 2;
+			this.ModifyAppointmentButton.Text = "Modify";
+			this.ModifyAppointmentButton.UseVisualStyleBackColor = true;
+			this.ModifyAppointmentButton.Click += new System.EventHandler(this.ModifyAppointmentButton_Click);
 			// 
 			// AddAppointmentButton
 			// 
@@ -168,7 +169,7 @@ namespace BOP3___Task1
 			this.groupBox2.Controls.Add(this.button10);
 			this.groupBox2.Controls.Add(this.button9);
 			this.groupBox2.Controls.Add(this.button8);
-			this.groupBox2.Controls.Add(this.button7);
+			this.groupBox2.Controls.Add(this.CalendarView);
 			this.groupBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBox2.Location = new System.Drawing.Point(718, 114);
 			this.groupBox2.Name = "groupBox2";
@@ -177,15 +178,16 @@ namespace BOP3___Task1
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Controls";
 			// 
-			// button7
+			// CalendarView
 			// 
-			this.button7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button7.Location = new System.Drawing.Point(63, 64);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(182, 51);
-			this.button7.TabIndex = 0;
-			this.button7.Text = "Calendar View";
-			this.button7.UseVisualStyleBackColor = true;
+			this.CalendarView.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.CalendarView.Location = new System.Drawing.Point(63, 64);
+			this.CalendarView.Name = "CalendarView";
+			this.CalendarView.Size = new System.Drawing.Size(182, 51);
+			this.CalendarView.TabIndex = 0;
+			this.CalendarView.Text = "Calendar View";
+			this.CalendarView.UseVisualStyleBackColor = true;
+			this.CalendarView.Click += new System.EventHandler(this.CalendarView_Click);
 			// 
 			// button8
 			// 
@@ -257,14 +259,14 @@ namespace BOP3___Task1
 		private System.Windows.Forms.Button AddCustButton;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button ModifyAppointmentButton;
 		private System.Windows.Forms.Button AddAppointmentButton;
 		private System.Windows.Forms.DataGridView dataGridView2;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Button button10;
 		private System.Windows.Forms.Button button9;
 		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button button7;
+		private System.Windows.Forms.Button CalendarView;
 		private System.Windows.Forms.Button LogoffButton;
 	}
 }

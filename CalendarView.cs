@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace BOP3___Task1
 {
-	public partial class AddAppointment : Form
+	public partial class CalendarView : Form
 	{
-		public AddAppointment()
+		public CalendarView()
 		{
 			InitializeComponent();
 		}
 
-		private void SaveButton_Click(object sender, EventArgs e)
-		{
-			this.Hide();
-		}
-
-		private void CancelButton_Click(object sender, EventArgs e)
+		private void ExitButton_Click(object sender, EventArgs e)
 		{
 			this.Hide();
 		}

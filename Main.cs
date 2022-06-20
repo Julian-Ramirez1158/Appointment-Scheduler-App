@@ -43,5 +43,19 @@ namespace BOP3___Task1
 			new AddAppointment().ShowDialog();
 			this.Show();
 		}
+
+		private void ModifyAppointmentButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			new ModifyAppointment().ShowDialog();
+			this.Show();
+		}
+
+		private void CalendarView_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			new CalendarView().ShowDialog();
+			this.Show();
+		}
 	}
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BOP3___Task1
 {
-	public partial class AddAppointment : Form
+	public partial class ModifyAppointment : Form
 	{
-		public AddAppointment()
+		public ModifyAppointment()
 		{
 			InitializeComponent();
 		}
@@ -26,5 +26,6 @@ namespace BOP3___Task1
 		{
 			this.Hide();
 		}
+
 	}
 }
