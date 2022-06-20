@@ -103,7 +103,7 @@ namespace BOP3___Task1
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(31, 37);
+			this.dataGridView1.Location = new System.Drawing.Point(31, 38);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.Size = new System.Drawing.Size(675, 300);
 			this.dataGridView1.TabIndex = 1;
