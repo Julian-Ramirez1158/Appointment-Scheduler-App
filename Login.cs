@@ -2,6 +2,9 @@
 using System;
 using System.Configuration;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Data;
+using System.ComponentModel;
 
 namespace BOP3___Task1
 {
@@ -10,6 +13,54 @@ namespace BOP3___Task1
 		public Login()
 		{
 			InitializeComponent();
+
+			DisplayLanguage();
+
+		}
+
+		private void DisplayLanguage() 
+		{
+			switch (RegionInfo.CurrentRegion.EnglishName) 
+			{
+				case "United States":
+					DisplayEnglish();
+					break;
+				case "Colombia":
+					DisplaySpanish();
+					break;
+				default:
+					DisplayEnglish();
+					break;
+			}
+		}
+
+		private void DisplayEnglish() 
+		{
+			UsernameLabel.Text = "Username:";
+			PasswordLabel.Text = "Password:";
+			LoginButton.Text = "Login";
+			ExitButton.Text = "Exit";
+		}
+
+		private void DisplaySpanish() 
+		{
+			UsernameLabel.Text = "Usuario:";
+			PasswordLabel.Text = "Contraseña:";
+			LoginButton.Text = "Iniciar";
+			ExitButton.Text = "Cancelar";
+		}
+
+		static public int VerifyUser(string userName, string password) 
+		{
+			MySqlCommand cmd = new MySqlCommand($"SELECT userId FROM user WHERE userName = '{userName}' AND password = '{password}'", c);
+			MySqlDataReader rdr = cmd.ExecuteReader();
+
+			if (rdr.HasRows) 
+			{
+				rdr.Read();
+				DataHelper.setCurrentUserId(Convert.ToInt32(rdr[]));
+			}
+			return 0;
 		}
 
 		private void LoginButton_Click(object sender, EventArgs e)
