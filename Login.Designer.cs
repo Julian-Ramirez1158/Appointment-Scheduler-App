@@ -31,11 +31,12 @@ namespace BOP3___Task1
 		{
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.MainLabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.PasswordLabel = new System.Windows.Forms.Label();
+            this.topLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UsernameLabel
@@ -59,19 +60,20 @@ namespace BOP3___Task1
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // textBox1
+            // usernameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 3;
+            this.usernameTextBox.Location = new System.Drawing.Point(252, 97);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(141, 20);
+            this.usernameTextBox.TabIndex = 3;
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(252, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 20);
-            this.textBox2.TabIndex = 3;
+            this.passwordTextBox.Location = new System.Drawing.Point(252, 168);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
+            this.passwordTextBox.Size = new System.Drawing.Size(141, 20);
+            this.passwordTextBox.TabIndex = 3;
             // 
             // MainLabel
             // 
@@ -104,15 +106,26 @@ namespace BOP3___Task1
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "Password:";
             // 
+            // topLabel
+            // 
+            this.topLabel.AutoSize = true;
+            this.topLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topLabel.Location = new System.Drawing.Point(91, 53);
+            this.topLabel.Name = "topLabel";
+            this.topLabel.Size = new System.Drawing.Size(355, 18);
+            this.topLabel.TabIndex = 5;
+            this.topLabel.Text = "Please enter your login credentials below:";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(526, 330);
+            this.Controls.Add(this.topLabel);
             this.Controls.Add(this.MainLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordLabel);
@@ -128,11 +141,12 @@ namespace BOP3___Task1
 
 		private System.Windows.Forms.Label UsernameLabel;
 		private System.Windows.Forms.Button LoginButton;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox usernameTextBox;
+		private System.Windows.Forms.TextBox passwordTextBox;
 		private System.Windows.Forms.Label MainLabel;
 		private System.Windows.Forms.Button ExitButton;
 		private System.Windows.Forms.Label PasswordLabel;
-	}
+        private System.Windows.Forms.Label topLabel;
+    }
 }
 
