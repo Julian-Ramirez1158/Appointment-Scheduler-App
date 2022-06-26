@@ -14,7 +14,7 @@ namespace BOP3___Task1.Database
 
 		public static MySqlConnection conn { get; set; }
 
-		public static void startConnection() 
+		public static MySqlConnection startConnection() 
 		{
 
 			// get connection string
@@ -24,14 +24,25 @@ namespace BOP3___Task1.Database
 			{
 				conn = new MySqlConnection(constr);
 
-				//open connection
-				conn.Open();
+
+
+				if (conn != null)
+                {
+					//open connection
+					conn.Open();
+					return conn;
+                }
+				else
+                {
+					return null;
+                }
 
 				// MessageBox.Show("Connection is open");
 			}
 			catch (MySqlException ex)
 			{
 				MessageBox.Show(ex.Message);
+				return null;
 			}
 		}
 
@@ -43,6 +54,7 @@ namespace BOP3___Task1.Database
 				if (conn != null)
 				{
 					conn.Close();
+					// MessageBox.Show("Connection closed!");
 				}
 			}
 			catch (MySqlException ex)

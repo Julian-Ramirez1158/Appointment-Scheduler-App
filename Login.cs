@@ -13,7 +13,7 @@ namespace BOP3___Task1
 {
 	public partial class Login : Form
 	{
-
+        public static MySqlConnection conn = null;
         public string loginError = "The username and password did not match";
 		public Login()
 		{
@@ -77,55 +77,31 @@ namespace BOP3___Task1
 
         static public int VerifyUser(string userName, string password)
         {
-            MySqlConnection conn = new MySqlConnection(DataManager.connectionString);
-            conn.Open();
-            MySqlCommand command1 = new MySqlCommand($"SELECT userId FROM user WHERE userName = '{userName}' AND password = '{password}'", conn);
+            conn = DBConnection.startConnection();
+            MySqlCommand command1 = new MySqlCommand(
+                $"SELECT userId FROM user WHERE userName = '{userName}' AND password = '{password}'", 
+                conn
+               );
             MySqlDataReader dataReader = command1.ExecuteReader();
 
             if (dataReader.HasRows)
             {
                 dataReader.Read();
-                DataManager.AssignCurrentUserID(Convert.ToInt32(dataReader[0]));
-                DataManager.AssignCurrentUserName(userName);
+                UserManager.AssignCurrentUserID(Convert.ToInt32(dataReader[0]));
+                UserManager.AssignCurrentUserName(userName);
                 dataReader.Close();
-                return DataManager.PullCurrentUserID();
+                return UserManager.PullCurrentUserID();
             }
             return 0;
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
 		{
-			//// get connection string
-			//string constr = ConfigurationManager.ConnectionStrings["localdb"].ConnectionString;
-
-			//// Make connection
-			//MySqlConnection conn = null;
-
-			//try
-			//{
-			//	conn = new MySqlConnection(constr);
-
-			//	//open connection
-			//	conn.Open();
-
-			//}
-			//catch (MySqlException ex)
-			//{
-			//	MessageBox.Show(ex.Message);
-			//}
-			//finally 
-			//{
-			//	//close connection
-			//	if (conn != null) 
-			//	{
-			//		conn.Close();	
-			//	}
-			//}
 
             if (VerifyUser(usernameTextBox.Text, passwordTextBox.Text) != 0)
             {
                 this.Hide();
-                new Main().ShowDialog();
+                new Main(conn).ShowDialog();
             }
             else
             {

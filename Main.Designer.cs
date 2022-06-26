@@ -29,230 +29,286 @@ namespace BOP3___Task1
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.CustomerGroupBox = new System.Windows.Forms.GroupBox();
-			this.AddCustButton = new System.Windows.Forms.Button();
-			this.ModifyCustButton = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.button4 = new System.Windows.Forms.Button();
-			this.ModifyAppointmentButton = new System.Windows.Forms.Button();
-			this.AddAppointmentButton = new System.Windows.Forms.Button();
-			this.dataGridView2 = new System.Windows.Forms.DataGridView();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.CalendarView = new System.Windows.Forms.Button();
-			this.button8 = new System.Windows.Forms.Button();
-			this.button9 = new System.Windows.Forms.Button();
-			this.button10 = new System.Windows.Forms.Button();
-			this.LogoffButton = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			this.CustomerGroupBox.SuspendLayout();
-			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-			this.groupBox2.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(33, 42);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(563, 220);
-			this.dataGridView1.TabIndex = 0;
-			// 
-			// CustomerGroupBox
-			// 
-			this.CustomerGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.CustomerGroupBox.Controls.Add(this.button3);
-			this.CustomerGroupBox.Controls.Add(this.ModifyCustButton);
-			this.CustomerGroupBox.Controls.Add(this.AddCustButton);
-			this.CustomerGroupBox.Controls.Add(this.dataGridView1);
-			this.CustomerGroupBox.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.CustomerGroupBox.Location = new System.Drawing.Point(39, 30);
-			this.CustomerGroupBox.Name = "CustomerGroupBox";
-			this.CustomerGroupBox.Size = new System.Drawing.Size(630, 326);
-			this.CustomerGroupBox.TabIndex = 2;
-			this.CustomerGroupBox.TabStop = false;
-			this.CustomerGroupBox.Text = "Customers";
-			// 
-			// AddCustButton
-			// 
-			this.AddCustButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AddCustButton.Location = new System.Drawing.Point(347, 277);
-			this.AddCustButton.Name = "AddCustButton";
-			this.AddCustButton.Size = new System.Drawing.Size(80, 29);
-			this.AddCustButton.TabIndex = 1;
-			this.AddCustButton.Text = "Add";
-			this.AddCustButton.UseVisualStyleBackColor = true;
-			this.AddCustButton.Click += new System.EventHandler(this.AddCustButton_Click);
-			// 
-			// ModifyCustButton
-			// 
-			this.ModifyCustButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ModifyCustButton.Location = new System.Drawing.Point(433, 277);
-			this.ModifyCustButton.Name = "ModifyCustButton";
-			this.ModifyCustButton.Size = new System.Drawing.Size(80, 29);
-			this.ModifyCustButton.TabIndex = 2;
-			this.ModifyCustButton.Text = "Modify";
-			this.ModifyCustButton.UseVisualStyleBackColor = true;
-			this.ModifyCustButton.Click += new System.EventHandler(this.ModifyCustButton_Click);
-			// 
-			// button3
-			// 
-			this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(516, 277);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(80, 29);
-			this.button3.TabIndex = 3;
-			this.button3.Text = "Delete";
-			this.button3.UseVisualStyleBackColor = true;
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.groupBox1.Controls.Add(this.button4);
-			this.groupBox1.Controls.Add(this.ModifyAppointmentButton);
-			this.groupBox1.Controls.Add(this.AddAppointmentButton);
-			this.groupBox1.Controls.Add(this.dataGridView2);
-			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox1.Location = new System.Drawing.Point(39, 376);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(630, 326);
-			this.groupBox1.TabIndex = 3;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Appointments";
-			// 
-			// button4
-			// 
-			this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button4.Location = new System.Drawing.Point(516, 277);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(80, 29);
-			this.button4.TabIndex = 3;
-			this.button4.Text = "Delete";
-			this.button4.UseVisualStyleBackColor = true;
-			// 
-			// ModifyAppointmentButton
-			// 
-			this.ModifyAppointmentButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ModifyAppointmentButton.Location = new System.Drawing.Point(433, 277);
-			this.ModifyAppointmentButton.Name = "ModifyAppointmentButton";
-			this.ModifyAppointmentButton.Size = new System.Drawing.Size(80, 29);
-			this.ModifyAppointmentButton.TabIndex = 2;
-			this.ModifyAppointmentButton.Text = "Modify";
-			this.ModifyAppointmentButton.UseVisualStyleBackColor = true;
-			this.ModifyAppointmentButton.Click += new System.EventHandler(this.ModifyAppointmentButton_Click);
-			// 
-			// AddAppointmentButton
-			// 
-			this.AddAppointmentButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AddAppointmentButton.Location = new System.Drawing.Point(347, 277);
-			this.AddAppointmentButton.Name = "AddAppointmentButton";
-			this.AddAppointmentButton.Size = new System.Drawing.Size(80, 29);
-			this.AddAppointmentButton.TabIndex = 1;
-			this.AddAppointmentButton.Text = "Add";
-			this.AddAppointmentButton.UseVisualStyleBackColor = true;
-			this.AddAppointmentButton.Click += new System.EventHandler(this.AddAppointmentButton_Click);
-			// 
-			// dataGridView2
-			// 
-			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView2.Location = new System.Drawing.Point(33, 42);
-			this.dataGridView2.Name = "dataGridView2";
-			this.dataGridView2.Size = new System.Drawing.Size(563, 220);
-			this.dataGridView2.TabIndex = 0;
-			// 
-			// groupBox2
-			// 
-			this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.groupBox2.Controls.Add(this.LogoffButton);
-			this.groupBox2.Controls.Add(this.button10);
-			this.groupBox2.Controls.Add(this.button9);
-			this.groupBox2.Controls.Add(this.button8);
-			this.groupBox2.Controls.Add(this.CalendarView);
-			this.groupBox2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox2.Location = new System.Drawing.Point(718, 114);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(298, 495);
-			this.groupBox2.TabIndex = 4;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Controls";
-			// 
-			// CalendarView
-			// 
-			this.CalendarView.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.CalendarView.Location = new System.Drawing.Point(63, 64);
-			this.CalendarView.Name = "CalendarView";
-			this.CalendarView.Size = new System.Drawing.Size(182, 51);
-			this.CalendarView.TabIndex = 0;
-			this.CalendarView.Text = "Calendar View";
-			this.CalendarView.UseVisualStyleBackColor = true;
-			this.CalendarView.Click += new System.EventHandler(this.CalendarView_Click);
-			// 
-			// button8
-			// 
-			this.button8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button8.Location = new System.Drawing.Point(63, 145);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(182, 51);
-			this.button8.TabIndex = 1;
-			this.button8.Text = "Appointment Type Report";
-			this.button8.UseVisualStyleBackColor = true;
-			// 
-			// button9
-			// 
-			this.button9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button9.Location = new System.Drawing.Point(63, 227);
-			this.button9.Name = "button9";
-			this.button9.Size = new System.Drawing.Size(182, 51);
-			this.button9.TabIndex = 2;
-			this.button9.Text = "Consultant Schedule Report";
-			this.button9.UseVisualStyleBackColor = true;
-			// 
-			// button10
-			// 
-			this.button10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button10.Location = new System.Drawing.Point(63, 314);
-			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(182, 51);
-			this.button10.TabIndex = 3;
-			this.button10.Text = "Report 3";
-			this.button10.UseVisualStyleBackColor = true;
-			// 
-			// LogoffButton
-			// 
-			this.LogoffButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LogoffButton.Location = new System.Drawing.Point(63, 398);
-			this.LogoffButton.Name = "LogoffButton";
-			this.LogoffButton.Size = new System.Drawing.Size(182, 51);
-			this.LogoffButton.TabIndex = 4;
-			this.LogoffButton.Text = "Log Off";
-			this.LogoffButton.UseVisualStyleBackColor = true;
-			this.LogoffButton.Click += new System.EventHandler(this.LogoffButton_Click);
-			// 
-			// Main
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(1058, 752);
-			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.CustomerGroupBox);
-			this.Name = "Main";
-			this.Text = "Main";
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			this.CustomerGroupBox.ResumeLayout(false);
-			this.groupBox1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-			this.groupBox2.ResumeLayout(false);
-			this.ResumeLayout(false);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.CustomerGroupBox = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ModifyCustButton = new System.Windows.Forms.Button();
+            this.AddCustButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.ModifyAppointmentButton = new System.Windows.Forms.Button();
+            this.AddAppointmentButton = new System.Windows.Forms.Button();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.LogoffButton = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.CalendarView = new System.Windows.Forms.Button();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PostalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            this.CustomerGroupBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // dgvCustomers
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CustomerID,
+            this.CustomerName,
+            this.Address,
+            this.PostalCode,
+            this.PhoneNumber});
+            this.dgvCustomers.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgvCustomers.Location = new System.Drawing.Point(33, 42);
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.Size = new System.Drawing.Size(714, 220);
+            this.dgvCustomers.TabIndex = 0;
+            // 
+            // CustomerGroupBox
+            // 
+            this.CustomerGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CustomerGroupBox.Controls.Add(this.button3);
+            this.CustomerGroupBox.Controls.Add(this.ModifyCustButton);
+            this.CustomerGroupBox.Controls.Add(this.AddCustButton);
+            this.CustomerGroupBox.Controls.Add(this.dgvCustomers);
+            this.CustomerGroupBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerGroupBox.Location = new System.Drawing.Point(39, 30);
+            this.CustomerGroupBox.Name = "CustomerGroupBox";
+            this.CustomerGroupBox.Size = new System.Drawing.Size(774, 326);
+            this.CustomerGroupBox.TabIndex = 2;
+            this.CustomerGroupBox.TabStop = false;
+            this.CustomerGroupBox.Text = "Customers";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(667, 277);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 29);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // ModifyCustButton
+            // 
+            this.ModifyCustButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifyCustButton.Location = new System.Drawing.Point(581, 277);
+            this.ModifyCustButton.Name = "ModifyCustButton";
+            this.ModifyCustButton.Size = new System.Drawing.Size(80, 29);
+            this.ModifyCustButton.TabIndex = 2;
+            this.ModifyCustButton.Text = "Modify";
+            this.ModifyCustButton.UseVisualStyleBackColor = true;
+            this.ModifyCustButton.Click += new System.EventHandler(this.ModifyCustButton_Click);
+            // 
+            // AddCustButton
+            // 
+            this.AddCustButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddCustButton.Location = new System.Drawing.Point(495, 277);
+            this.AddCustButton.Name = "AddCustButton";
+            this.AddCustButton.Size = new System.Drawing.Size(80, 29);
+            this.AddCustButton.TabIndex = 1;
+            this.AddCustButton.Text = "Add";
+            this.AddCustButton.UseVisualStyleBackColor = true;
+            this.AddCustButton.Click += new System.EventHandler(this.AddCustButton_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.ModifyAppointmentButton);
+            this.groupBox1.Controls.Add(this.AddAppointmentButton);
+            this.groupBox1.Controls.Add(this.dgvAppointments);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(39, 376);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(774, 326);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Appointments";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(667, 277);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 29);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // ModifyAppointmentButton
+            // 
+            this.ModifyAppointmentButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifyAppointmentButton.Location = new System.Drawing.Point(581, 277);
+            this.ModifyAppointmentButton.Name = "ModifyAppointmentButton";
+            this.ModifyAppointmentButton.Size = new System.Drawing.Size(80, 29);
+            this.ModifyAppointmentButton.TabIndex = 2;
+            this.ModifyAppointmentButton.Text = "Modify";
+            this.ModifyAppointmentButton.UseVisualStyleBackColor = true;
+            this.ModifyAppointmentButton.Click += new System.EventHandler(this.ModifyAppointmentButton_Click);
+            // 
+            // AddAppointmentButton
+            // 
+            this.AddAppointmentButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAppointmentButton.Location = new System.Drawing.Point(495, 277);
+            this.AddAppointmentButton.Name = "AddAppointmentButton";
+            this.AddAppointmentButton.Size = new System.Drawing.Size(80, 29);
+            this.AddAppointmentButton.TabIndex = 1;
+            this.AddAppointmentButton.Text = "Add";
+            this.AddAppointmentButton.UseVisualStyleBackColor = true;
+            this.AddAppointmentButton.Click += new System.EventHandler(this.AddAppointmentButton_Click);
+            // 
+            // dgvAppointments
+            // 
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Location = new System.Drawing.Point(33, 42);
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.Size = new System.Drawing.Size(714, 220);
+            this.dgvAppointments.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.Controls.Add(this.LogoffButton);
+            this.groupBox2.Controls.Add(this.button10);
+            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.CalendarView);
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(854, 99);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(298, 495);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Controls";
+            // 
+            // LogoffButton
+            // 
+            this.LogoffButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoffButton.Location = new System.Drawing.Point(63, 398);
+            this.LogoffButton.Name = "LogoffButton";
+            this.LogoffButton.Size = new System.Drawing.Size(182, 51);
+            this.LogoffButton.TabIndex = 4;
+            this.LogoffButton.Text = "Log Off";
+            this.LogoffButton.UseVisualStyleBackColor = true;
+            this.LogoffButton.Click += new System.EventHandler(this.LogoffButton_Click);
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(63, 314);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(182, 51);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "Report 3";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(63, 227);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(182, 51);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Consultant Schedule Report";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(63, 145);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(182, 51);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Appointment Type Report";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // CalendarView
+            // 
+            this.CalendarView.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalendarView.Location = new System.Drawing.Point(63, 64);
+            this.CalendarView.Name = "CalendarView";
+            this.CalendarView.Size = new System.Drawing.Size(182, 51);
+            this.CalendarView.TabIndex = 0;
+            this.CalendarView.Text = "Calendar View";
+            this.CalendarView.UseVisualStyleBackColor = true;
+            this.CalendarView.Click += new System.EventHandler(this.CalendarView_Click);
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.HeaderText = "ID";
+            this.CustomerID.Name = "CustomerID";
+            this.CustomerID.ReadOnly = true;
+            this.CustomerID.Width = 60;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            this.CustomerName.Width = 150;
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 245;
+            // 
+            // PostalCode
+            // 
+            this.PostalCode.HeaderText = "Postal Code";
+            this.PostalCode.Name = "PostalCode";
+            this.PostalCode.ReadOnly = true;
+            this.PostalCode.Width = 95;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.HeaderText = "Phone Number";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            this.PhoneNumber.Width = 120;
+            // 
+            // Main
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1184, 752);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.CustomerGroupBox);
+            this.Name = "Main";
+            this.Text = "Main";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            this.CustomerGroupBox.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.DataGridView dgvCustomers;
 		private System.Windows.Forms.GroupBox CustomerGroupBox;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button ModifyCustButton;
@@ -261,12 +317,17 @@ namespace BOP3___Task1
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button ModifyAppointmentButton;
 		private System.Windows.Forms.Button AddAppointmentButton;
-		private System.Windows.Forms.DataGridView dataGridView2;
+		private System.Windows.Forms.DataGridView dgvAppointments;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Button button10;
 		private System.Windows.Forms.Button button9;
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Button CalendarView;
 		private System.Windows.Forms.Button LogoffButton;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PostalCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+    }
 }

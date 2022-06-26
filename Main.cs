@@ -7,19 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BOP3___Task1.Database;
+using MySql.Data.MySqlClient;
 
 namespace BOP3___Task1
 {
 	public partial class Main : Form
 	{
-		public Main()
+		public static MySqlConnection _conn;
+		public Main(MySqlConnection conn)
 		{
 			InitializeComponent();
+
+			_conn = conn;
+			CustomerManager CustomerMgr = new CustomerManager(_conn);
+			MySqlDataReader CustomerData = CustomerMgr.getCustomerData();
+			CustomerData.Read();
+			dgvCustomers.DataSource = CustomerData;
+
+			// MessageBox.Show("test");
 		}
 
 		private void LogoffButton_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+			DBConnection.closeConnection();
 			new Login().ShowDialog();
 		}
 
@@ -57,5 +69,6 @@ namespace BOP3___Task1
 			new CalendarView().ShowDialog();
 			this.Show();
 		}
-	}
+
+    }
 }

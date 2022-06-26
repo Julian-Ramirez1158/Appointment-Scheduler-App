@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace BOP3___Task1
 {
-    class DataManager
+    class UserManager
     {
         private static string _currentUserName;
         private static int _currentUserID;
-        public static string connectionString = "Host=localhost;Port=3306;Database=client_schedule;Username=sqlUser;Password=Passw0rd!";
 
         public static int PullCurrentUserID()
         {
