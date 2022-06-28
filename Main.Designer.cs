@@ -46,11 +46,6 @@ namespace BOP3___Task1
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.CalendarView = new System.Windows.Forms.Button();
-            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PostalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.CustomerGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -60,21 +55,15 @@ namespace BOP3___Task1
             // 
             // dgvCustomers
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CustomerID,
-            this.CustomerName,
-            this.Address,
-            this.PostalCode,
-            this.PhoneNumber});
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomers.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomers.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvCustomers.Location = new System.Drawing.Point(33, 42);
             this.dgvCustomers.Name = "dgvCustomers";
@@ -88,7 +77,7 @@ namespace BOP3___Task1
             this.CustomerGroupBox.Controls.Add(this.ModifyCustButton);
             this.CustomerGroupBox.Controls.Add(this.AddCustButton);
             this.CustomerGroupBox.Controls.Add(this.dgvCustomers);
-            this.CustomerGroupBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerGroupBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerGroupBox.Location = new System.Drawing.Point(39, 30);
             this.CustomerGroupBox.Name = "CustomerGroupBox";
             this.CustomerGroupBox.Size = new System.Drawing.Size(774, 326);
@@ -251,41 +240,6 @@ namespace BOP3___Task1
             this.CalendarView.UseVisualStyleBackColor = true;
             this.CalendarView.Click += new System.EventHandler(this.CalendarView_Click);
             // 
-            // CustomerID
-            // 
-            this.CustomerID.HeaderText = "ID";
-            this.CustomerID.Name = "CustomerID";
-            this.CustomerID.ReadOnly = true;
-            this.CustomerID.Width = 60;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            this.CustomerName.Width = 150;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 245;
-            // 
-            // PostalCode
-            // 
-            this.PostalCode.HeaderText = "Postal Code";
-            this.PostalCode.Name = "PostalCode";
-            this.PostalCode.ReadOnly = true;
-            this.PostalCode.Width = 95;
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.HeaderText = "Phone Number";
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Width = 120;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,10 +278,5 @@ namespace BOP3___Task1
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Button CalendarView;
 		private System.Windows.Forms.Button LogoffButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PostalCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
     }
 }

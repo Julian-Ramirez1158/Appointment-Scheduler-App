@@ -20,12 +20,44 @@ namespace BOP3___Task1
 			InitializeComponent();
 
 			_conn = conn;
-			CustomerManager CustomerMgr = new CustomerManager(_conn);
-			MySqlDataReader CustomerData = CustomerMgr.getCustomerData();
-			CustomerData.Read();
-			dgvCustomers.DataSource = CustomerData;
+
+			CustomerManager customers = new CustomerManager();
+
+			dgvCustomers.DataSource = customers.getCustomerData();
+			
+			//using (conn)
+   //         {
+			//	using (MySqlCommand command = new MySqlCommand("SELECT CU.customerId, CU.customerName, CONCAT(AD.address , ', ' , CI.city , ', ' , CO.country), " +
+			//"AD.postalCode, AD.phone " +
+			//"FROM customer AS CU, address AS AD, city AS CI, country AS CO " +
+			//"WHERE CU.addressId = AD.addressId AND AD.cityId = CI.cityId AND CI.countryId = CO.countryId;", conn))
+   //             {
+			//		command.CommandType = CommandType.Text;
+			//		using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+			//		{
+			//			using (DataTable dataTable = new DataTable())
+   //                     {
+			//				adapter.Fill(dataTable);
+			//				dgvCustomers.DataSource = dataTable;
+			//			}
+   //                 }
+   //             }
+   //         }
+			//CustomerManager CustomerMgr = new CustomerManager(_conn);
+			//MySqlDataReader CustomerData = CustomerMgr.getCustomerData();
+			//CustomerData.Read();
+			//dgvCustomers.DataSource = CustomerData;
 
 			// MessageBox.Show("test");
+
+			//MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT CU.customerId, CU.customerName, CONCAT(AD.address , ', ' , CI.city , ', ' , CO.country), " +
+			//"AD.postalCode, AD.phone " +
+			//"FROM customer AS CU, address AS AD, city AS CI, country AS CO " +
+			//"WHERE CU.addressId = AD.addressId AND AD.cityId = CI.cityId AND CI.countryId = CO.countryId;", conn);
+
+			//DataTable dataTable = new DataTable();
+			//adapter.Fill(dataTable);
+			//dgvCustomers.DataSource = dataTable;
 		}
 
 		private void LogoffButton_Click(object sender, EventArgs e)
