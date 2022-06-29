@@ -101,6 +101,7 @@
     <Compile Include="CalendarView.Designer.cs">
       <DependentUpon>CalendarView.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataManager\AppointmentManager.cs" />
     <Compile Include="DataManager\CustomerManager.cs" />
     <Compile Include="DataManager\UserManager.cs" />
     <Compile Include="ModifyAppointment.cs">

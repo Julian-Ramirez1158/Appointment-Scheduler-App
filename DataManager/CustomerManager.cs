@@ -21,7 +21,7 @@ namespace BOP3___Task1
             DataTable allCustomers = new DataTable();
 
             if (!allCustomers.Columns.Contains("ID")) { allCustomers.Columns.Add("ID", typeof(int));  }
-            if (!allCustomers.Columns.Contains("Name")) { allCustomers.Columns.Add("Name", typeof(string)); }
+            if (!allCustomers.Columns.Contains("Customer Name")) { allCustomers.Columns.Add("Customer Name", typeof(string)); }
             if (!allCustomers.Columns.Contains("Address")) { allCustomers.Columns.Add("Address", typeof(string)); }
             if (!allCustomers.Columns.Contains("City")) { allCustomers.Columns.Add("City", typeof(string)); }
             if (!allCustomers.Columns.Contains("Country")) { allCustomers.Columns.Add("Country", typeof(string)); }

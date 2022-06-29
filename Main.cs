@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BOP3___Task1.Database;
+using BOP3___Task1.DataManager;
 using MySql.Data.MySqlClient;
 
 namespace BOP3___Task1
@@ -24,40 +25,33 @@ namespace BOP3___Task1
 			CustomerManager customers = new CustomerManager();
 
 			dgvCustomers.DataSource = customers.getCustomerData();
-			
-			//using (conn)
-   //         {
-			//	using (MySqlCommand command = new MySqlCommand("SELECT CU.customerId, CU.customerName, CONCAT(AD.address , ', ' , CI.city , ', ' , CO.country), " +
-			//"AD.postalCode, AD.phone " +
-			//"FROM customer AS CU, address AS AD, city AS CI, country AS CO " +
-			//"WHERE CU.addressId = AD.addressId AND AD.cityId = CI.cityId AND CI.countryId = CO.countryId;", conn))
-   //             {
-			//		command.CommandType = CommandType.Text;
-			//		using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
-			//		{
-			//			using (DataTable dataTable = new DataTable())
-   //                     {
-			//				adapter.Fill(dataTable);
-			//				dgvCustomers.DataSource = dataTable;
-			//			}
-   //                 }
-   //             }
-   //         }
-			//CustomerManager CustomerMgr = new CustomerManager(_conn);
-			//MySqlDataReader CustomerData = CustomerMgr.getCustomerData();
-			//CustomerData.Read();
-			//dgvCustomers.DataSource = CustomerData;
 
-			// MessageBox.Show("test");
+			// selects full row in data grid
+			dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-			//MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT CU.customerId, CU.customerName, CONCAT(AD.address , ', ' , CI.city , ', ' , CO.country), " +
-			//"AD.postalCode, AD.phone " +
-			//"FROM customer AS CU, address AS AD, city AS CI, country AS CO " +
-			//"WHERE CU.addressId = AD.addressId AND AD.cityId = CI.cityId AND CI.countryId = CO.countryId;", conn);
+			// make data grid read only and turn multiselect off
+			dgvCustomers.ReadOnly = true;
+			dgvCustomers.MultiSelect = false;
 
-			//DataTable dataTable = new DataTable();
-			//adapter.Fill(dataTable);
-			//dgvCustomers.DataSource = dataTable;
+			// remove blank bottom row
+			dgvCustomers.AllowUserToAddRows = false;
+
+
+
+			AppointmentManager appointments = new AppointmentManager();
+
+			dgvAppointments.DataSource = appointments.getAppointmentData();
+
+			// selects full row in data grid
+			dgvAppointments.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+			// make data grid read only and turn multiselect off
+			dgvAppointments.ReadOnly = true;
+			dgvAppointments.MultiSelect = false;
+
+			// remove blank bottom row
+			dgvAppointments.AllowUserToAddRows = false;
+
 		}
 
 		private void LogoffButton_Click(object sender, EventArgs e)
