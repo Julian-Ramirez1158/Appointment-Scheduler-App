@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BOP3___Task1.DataManager;
 
 namespace BOP3___Task1
 {
@@ -19,6 +20,26 @@ namespace BOP3___Task1
 
 		private void SaveButton_Click(object sender, EventArgs e)
 		{
+			int countryID = CustomerManager.addCountry(countryBox.Text);
+			int cityID = CustomerManager.addCity(countryID, cityBox.Text);
+			int addressID = CustomerManager.addAddress(cityID, addressBox.Text, postalCodeBox.Text, phoneNumberBox.Text);
+			
+			
+
+			CustomerManager.addCustomer(CustomerManager.updateID("customer", "customerId") + 1, nameBox.Text, addressID, int active, );
+
+
+
+
+
+
+
+
+
+
+
+
+
 			this.Hide();
 		}
 

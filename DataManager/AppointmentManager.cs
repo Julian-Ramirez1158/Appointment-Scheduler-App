@@ -21,24 +21,18 @@ namespace BOP3___Task1.DataManager
             if (!allAppointments.Columns.Contains("Appointment ID")) { allAppointments.Columns.Add("Appointment ID", typeof(int)); }
             if (!allAppointments.Columns.Contains("Customer ID")) { allAppointments.Columns.Add("Customer ID", typeof(int)); }
             if (!allAppointments.Columns.Contains("User ID")) { allAppointments.Columns.Add("User ID", typeof(int)); }
-            if (!allAppointments.Columns.Contains("Title")) { allAppointments.Columns.Add("Title", typeof(string)); }
             if (!allAppointments.Columns.Contains("Description")) { allAppointments.Columns.Add("Description", typeof(string)); }
             if (!allAppointments.Columns.Contains("Location")) { allAppointments.Columns.Add("Location", typeof(string)); }
-            if (!allAppointments.Columns.Contains("Contact")) { allAppointments.Columns.Add("Contact", typeof(string)); }
             if (!allAppointments.Columns.Contains("Type")) { allAppointments.Columns.Add("Type", typeof(string)); }
-            if (!allAppointments.Columns.Contains("URL")) { allAppointments.Columns.Add("URL", typeof(string)); }
             if (!allAppointments.Columns.Contains("Start")) { allAppointments.Columns.Add("Start", typeof(string)); }
             if (!allAppointments.Columns.Contains("End")) { allAppointments.Columns.Add("End", typeof(string)); }
             if (!allAppointments.Columns.Contains("Created")) { allAppointments.Columns.Add("Created", typeof(string)); }
             if (!allAppointments.Columns.Contains("Created By")) { allAppointments.Columns.Add("Created By", typeof(string)); }
-            if (!allAppointments.Columns.Contains("Updated")) { allAppointments.Columns.Add("Updated", typeof(string)); }
-            if (!allAppointments.Columns.Contains("Updated By")) { allAppointments.Columns.Add("Updated By", typeof(string)); }
-            
 
 
             conn.Open();
 
-            string query = "SELECT * FROM appointment;";
+            string query = "SELECT appointmentId, customerId, userId, title, description, location , type, start, end, createDate, createdBy FROM appointment;";
 
             MySqlCommand command1 = new MySqlCommand(query, conn);
             using (MySqlDataReader dataReader = command1.ExecuteReader())
@@ -46,10 +40,9 @@ namespace BOP3___Task1.DataManager
                 while (dataReader.Read())
                 {
                     allAppointments.Rows.Add(
-                        dataReader["appointmentId"], dataReader["customerId"], dataReader["userId"], dataReader["title"], 
-                        dataReader["description"], dataReader["location"], dataReader["contact"], dataReader["type"], dataReader["url"],
-                        dataReader["start"], dataReader["end"], dataReader["createDate"], dataReader["createdBy"], dataReader["lastUpdate"],
-                        dataReader["lastUpdateBy"]);
+                        dataReader["appointmentId"], dataReader["customerId"], dataReader["userId"],
+                        dataReader["description"], dataReader["location"], dataReader["type"],
+                        dataReader["start"], dataReader["end"], dataReader["createDate"], dataReader["createdBy"]);
                 }
             }
 
