@@ -10,6 +10,7 @@ namespace BOP3___Task1
     {
         private static string _currentUserName;
         private static int _currentUserID;
+ 
 
         public static int PullCurrentUserID()
         {
@@ -25,6 +26,7 @@ namespace BOP3___Task1
         {
             return _currentUserName;
         }
+
 
         public static void AssignCurrentUserName(string currentUserName)
         {
