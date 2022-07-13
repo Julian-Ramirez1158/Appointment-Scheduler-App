@@ -22,21 +22,34 @@ namespace BOP3___Task1
 
 		private void SaveButton_Click(object sender, EventArgs e)
 		{
-			int active = 1;
-			int countryID = CustomerManager.addCountry(countryBox.Text);
-			int cityID = CustomerManager.addCity(countryID, cityBox.Text);
-			int addressID = CustomerManager.addAddress(cityID, addressBox.Text, postalCodeBox.Text, phoneNumberBox.Text);
-			
-			
 
-			CustomerManager.addCustomer(CustomerManager.updateID("customer", "customerId") + 1, 
-										nameBox.Text, addressID, active, CustomerManager.dateTime(), UserManager.PullCurrentUserName());
+			if ((string.IsNullOrEmpty(nameBox.Text) || string.IsNullOrWhiteSpace(nameBox.Text)) ||
+				(string.IsNullOrEmpty(addressBox.Text) || string.IsNullOrWhiteSpace(addressBox.Text)) ||
+				(string.IsNullOrEmpty(cityBox.Text) || string.IsNullOrWhiteSpace(cityBox.Text)) ||
+				(string.IsNullOrEmpty(countryBox.Text) || string.IsNullOrWhiteSpace(countryBox.Text)) ||
+				(string.IsNullOrEmpty(postalCodeBox.Text) || string.IsNullOrWhiteSpace(postalCodeBox.Text)) ||
+				(string.IsNullOrEmpty(phoneNumberBox.Text) || string.IsNullOrWhiteSpace(phoneNumberBox.Text))
+				)
+            {
+				MessageBox.Show("Please ensure all fields are completed");
+            }
+			else
+            {
+				int active = 1;
+				int countryID = CustomerManager.addCountry(countryBox.Text);
+				int cityID = CustomerManager.addCity(countryID, cityBox.Text);
+				int addressID = CustomerManager.addAddress(cityID, addressBox.Text, postalCodeBox.Text, phoneNumberBox.Text);
 
 
-			this.Hide();
-			new Main(_conn).ShowDialog();
-			this.Show();
 
+				CustomerManager.addCustomer(CustomerManager.updateID("customer", "customerId") + 1,
+											nameBox.Text, addressID, active, CustomerManager.dateTime(), UserManager.PullCurrentUserName());
+
+
+				this.Hide();
+				new Main(_conn).ShowDialog();
+				this.Show();
+			}
 
 		}
 
