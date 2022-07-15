@@ -13,24 +13,7 @@ namespace BOP3___Task1
     {
 
         private const string connString = "Host=localhost;Port=3306;Database=client_schedule;Username=sqlUser;Password=Passw0rd!";
-        //public int ID { get; set; }
-        //public string CustomerName { get; set; }
-        //public string Address { get; set; }
-        //public string City { get; set; }
-        //public string Country { get; set; }
-        //public string PostalCode { get; set; }
-        //public string PhoneNumber { get; set; }
 
-        //public CustomerManager (int _id, string _customerName, string _address, string _city, string _country, string _postalCode, string _phoneNumber)
-        //{
-        //    ID = _id;
-        //    CustomerName = _customerName;
-        //    Address = _address;
-        //    City = _city;
-        //    Country = _country;
-        //    PostalCode = _postalCode;
-        //    PhoneNumber = _phoneNumber;
-        //}
 
 
 
@@ -191,7 +174,22 @@ namespace BOP3___Task1
             return addressID;
         }
 
+        public bool deleteCust (int customerId)
+        {
+            MySqlConnection conn = new MySqlConnection(connString);
 
+            conn.Open();
+            MySqlCommand command = conn.CreateCommand();
+            command.CommandText = $"DELETE FROM customer WHERE customerId = {customerId}";
+            command.Parameters.AddWithValue($"{customerId}", customerId);
+            command.ExecuteNonQuery();
+
+            conn.Close();
+
+            
+
+            return true;
+        }
 
 
     }

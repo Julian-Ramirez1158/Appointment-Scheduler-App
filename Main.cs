@@ -75,6 +75,23 @@ namespace BOP3___Task1
 			this.Show();
 		}
 
+		private void custDeleteButton_Click(object sender, EventArgs e)
+		{
+			DialogResult deletePartAnswer = MessageBox.Show("Are you sure want to delete this customer?", "Confirmation" , MessageBoxButtons.YesNo);
+			int selectedCustomer = Convert.ToInt32(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[0].Value);
+
+			if (selectedCustomer != 1)
+            {
+				CustomerManager customers = new CustomerManager();
+				customers.deleteCust(selectedCustomer);
+				dgvCustomers.DataSource = customers.getCustomerData();
+            }
+			else
+            {
+				MessageBox.Show("No customers selected." , "Error!");
+            }
+		}
+
 		private void AddAppointmentButton_Click(object sender, EventArgs e)
 		{
 			this.Hide();

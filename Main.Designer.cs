@@ -29,7 +29,6 @@ namespace BOP3___Task1
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.ModifyAppointmentButton = new System.Windows.Forms.Button();
@@ -44,7 +43,7 @@ namespace BOP3___Task1
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.AddCustButton = new System.Windows.Forms.Button();
             this.ModifyCustButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.custDeleteButton = new System.Windows.Forms.Button();
             this.CustomerGroupBox = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
@@ -179,14 +178,6 @@ namespace BOP3___Task1
             // dgvCustomers
             // 
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCustomers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCustomers.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvCustomers.Location = new System.Drawing.Point(33, 39);
             this.dgvCustomers.Name = "dgvCustomers";
@@ -215,20 +206,21 @@ namespace BOP3___Task1
             this.ModifyCustButton.UseVisualStyleBackColor = true;
             this.ModifyCustButton.Click += new System.EventHandler(this.ModifyCustButton_Click);
             // 
-            // button3
+            // custDeleteButton
             // 
-            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(696, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 29);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.custDeleteButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custDeleteButton.Location = new System.Drawing.Point(696, 275);
+            this.custDeleteButton.Name = "custDeleteButton";
+            this.custDeleteButton.Size = new System.Drawing.Size(80, 29);
+            this.custDeleteButton.TabIndex = 3;
+            this.custDeleteButton.Text = "Delete";
+            this.custDeleteButton.UseVisualStyleBackColor = true;
+            this.custDeleteButton.Click += new System.EventHandler(this.custDeleteButton_Click);
             // 
             // CustomerGroupBox
             // 
             this.CustomerGroupBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CustomerGroupBox.Controls.Add(this.button3);
+            this.CustomerGroupBox.Controls.Add(this.custDeleteButton);
             this.CustomerGroupBox.Controls.Add(this.ModifyCustButton);
             this.CustomerGroupBox.Controls.Add(this.AddCustButton);
             this.CustomerGroupBox.Controls.Add(this.dgvCustomers);
@@ -275,7 +267,7 @@ namespace BOP3___Task1
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Button AddCustButton;
         private System.Windows.Forms.Button ModifyCustButton;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button custDeleteButton;
         private System.Windows.Forms.GroupBox CustomerGroupBox;
     }
 }
