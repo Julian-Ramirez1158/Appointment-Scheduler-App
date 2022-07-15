@@ -113,5 +113,16 @@ namespace BOP3___Task1
 			this.Show();
 		}
 
+
+		// these clear selection of rows in datagirds upon opening the application
+        private void clearSelection(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+			dgvCustomers.ClearSelection();
+        }
+
+        private void clearSelection2(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+			dgvAppointments.ClearSelection();
+        }
     }
 }

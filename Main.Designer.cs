@@ -106,6 +106,7 @@ namespace BOP3___Task1
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.Size = new System.Drawing.Size(743, 220);
             this.dgvAppointments.TabIndex = 0;
+            this.dgvAppointments.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.clearSelection2);
             // 
             // groupBox2
             // 
@@ -183,6 +184,7 @@ namespace BOP3___Task1
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.Size = new System.Drawing.Size(743, 220);
             this.dgvCustomers.TabIndex = 0;
+            this.dgvCustomers.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.clearSelection);
             // 
             // AddCustButton
             // 
