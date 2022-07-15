@@ -87,6 +87,7 @@ namespace BOP3___Task1
             // 
             // ExitButton
             // 
+            this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.Location = new System.Drawing.Point(315, 220);
             this.ExitButton.Name = "ExitButton";
@@ -118,9 +119,11 @@ namespace BOP3___Task1
             // 
             // Login
             // 
+            this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CancelButton = this.ExitButton;
             this.ClientSize = new System.Drawing.Size(526, 330);
             this.Controls.Add(this.topLabel);
             this.Controls.Add(this.MainLabel);
