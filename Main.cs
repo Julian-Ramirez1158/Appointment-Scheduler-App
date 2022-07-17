@@ -70,25 +70,47 @@ namespace BOP3___Task1
 
 		private void ModifyCustButton_Click(object sender, EventArgs e)
 		{
-			this.Hide();
-			new ModifyCustomer().ShowDialog();
-			this.Show();
+			// check for row selection and null values
+			if (dgvCustomers.CurrentRow == null || !dgvCustomers.CurrentRow.Selected)
+			{
+				MessageBox.Show("Nothing was selected! Please select a customer to delete.");
+				return;
+			}
+			
+
+			int selectedCustomerIndex = Convert.ToInt32(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[0].Value);
+
+			if (selectedCustomerIndex != -1)
+            {
+				this.Hide();
+				ModifyCustomer modCustomer = new ModifyCustomer(selectedCustomerIndex);
+				modCustomer.ShowDialog();
+				this.Show();
+			}
 		}
 
 		private void custDeleteButton_Click(object sender, EventArgs e)
 		{
-			DialogResult deletePartAnswer = MessageBox.Show("Are you sure want to delete this customer?", "Confirmation" , MessageBoxButtons.YesNo);
+			// check for row selection and null values
+			if (dgvCustomers.CurrentRow == null || !dgvCustomers.CurrentRow.Selected)
+            {
+				MessageBox.Show("Nothing was selected! Please select a customer to delete.");
+				return;
+            }
+
+			DialogResult deleteCustomerAnswer = MessageBox.Show("Are you sure want to delete this customer?", "Confirmation" , MessageBoxButtons.YesNo);
 			int selectedCustomer = Convert.ToInt32(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[0].Value);
 
-			if (selectedCustomer != 1)
+
+			if (deleteCustomerAnswer == DialogResult.Yes)
             {
 				CustomerManager customers = new CustomerManager();
 				customers.deleteCust(selectedCustomer);
 				dgvCustomers.DataSource = customers.getCustomerData();
-            }
+			}
 			else
             {
-				MessageBox.Show("No customers selected." , "Error!");
+				return;
             }
 		}
 
@@ -124,5 +146,6 @@ namespace BOP3___Task1
         {
 			dgvAppointments.ClearSelection();
         }
+
     }
 }

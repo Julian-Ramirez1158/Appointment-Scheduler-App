@@ -35,13 +35,13 @@ namespace BOP3___Task1
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.phoneNumberBox = new System.Windows.Forms.TextBox();
+            this.postalCodeBox = new System.Windows.Forms.TextBox();
+            this.countryBox = new System.Windows.Forms.TextBox();
+            this.cityBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,13 +57,13 @@ namespace BOP3___Task1
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.phoneNumberBox);
+            this.groupBox1.Controls.Add(this.postalCodeBox);
+            this.groupBox1.Controls.Add(this.countryBox);
+            this.groupBox1.Controls.Add(this.cityBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.addressBox);
+            this.groupBox1.Controls.Add(this.nameBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -128,41 +128,41 @@ namespace BOP3___Task1
             this.label5.TabIndex = 13;
             this.label5.Text = "Country:";
             // 
-            // textBox7
+            // phoneNumberBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(221, 289);
-            this.textBox7.MaximumSize = new System.Drawing.Size(180, 20);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(180, 23);
-            this.textBox7.TabIndex = 11;
+            this.phoneNumberBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneNumberBox.Location = new System.Drawing.Point(221, 289);
+            this.phoneNumberBox.MaximumSize = new System.Drawing.Size(180, 20);
+            this.phoneNumberBox.Name = "phoneNumberBox";
+            this.phoneNumberBox.Size = new System.Drawing.Size(180, 23);
+            this.phoneNumberBox.TabIndex = 11;
             // 
-            // textBox6
+            // postalCodeBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(221, 252);
-            this.textBox6.MaximumSize = new System.Drawing.Size(180, 20);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(180, 23);
-            this.textBox6.TabIndex = 10;
+            this.postalCodeBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postalCodeBox.Location = new System.Drawing.Point(221, 252);
+            this.postalCodeBox.MaximumSize = new System.Drawing.Size(180, 20);
+            this.postalCodeBox.Name = "postalCodeBox";
+            this.postalCodeBox.Size = new System.Drawing.Size(180, 23);
+            this.postalCodeBox.TabIndex = 10;
             // 
-            // textBox5
+            // countryBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(221, 214);
-            this.textBox5.MaximumSize = new System.Drawing.Size(180, 20);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 23);
-            this.textBox5.TabIndex = 9;
+            this.countryBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryBox.Location = new System.Drawing.Point(221, 214);
+            this.countryBox.MaximumSize = new System.Drawing.Size(180, 20);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(180, 23);
+            this.countryBox.TabIndex = 9;
             // 
-            // textBox4
+            // cityBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(221, 177);
-            this.textBox4.MaximumSize = new System.Drawing.Size(180, 20);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 23);
-            this.textBox4.TabIndex = 8;
+            this.cityBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityBox.Location = new System.Drawing.Point(221, 177);
+            this.cityBox.MaximumSize = new System.Drawing.Size(180, 20);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(180, 23);
+            this.cityBox.TabIndex = 8;
             // 
             // label4
             // 
@@ -174,23 +174,23 @@ namespace BOP3___Task1
             this.label4.TabIndex = 7;
             this.label4.Text = "City:";
             // 
-            // textBox3
+            // addressBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(221, 139);
-            this.textBox3.MaximumSize = new System.Drawing.Size(180, 20);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 23);
-            this.textBox3.TabIndex = 6;
+            this.addressBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressBox.Location = new System.Drawing.Point(221, 139);
+            this.addressBox.MaximumSize = new System.Drawing.Size(180, 20);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(180, 23);
+            this.addressBox.TabIndex = 6;
             // 
-            // textBox2
+            // nameBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(221, 102);
-            this.textBox2.MaximumSize = new System.Drawing.Size(180, 20);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 23);
-            this.textBox2.TabIndex = 5;
+            this.nameBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameBox.Location = new System.Drawing.Point(221, 102);
+            this.nameBox.MaximumSize = new System.Drawing.Size(180, 20);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(180, 23);
+            this.nameBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -237,7 +237,7 @@ namespace BOP3___Task1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(554, 489);
             this.Controls.Add(this.groupBox1);
             this.Name = "ModifyCustomer";
@@ -255,16 +255,16 @@ namespace BOP3___Task1
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox addressBox;
+		private System.Windows.Forms.TextBox nameBox;
+		private System.Windows.Forms.TextBox cityBox;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox7;
-		private System.Windows.Forms.TextBox textBox6;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox phoneNumberBox;
+		private System.Windows.Forms.TextBox postalCodeBox;
+		private System.Windows.Forms.TextBox countryBox;
 		private System.Windows.Forms.Button CancelButton;
 		private System.Windows.Forms.Button SaveButton;
 	}

@@ -122,7 +122,7 @@ namespace BOP3___Task1
             this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.CancelButton = this.ExitButton;
             this.ClientSize = new System.Drawing.Size(526, 330);
             this.Controls.Add(this.topLabel);
