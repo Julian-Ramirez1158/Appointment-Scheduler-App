@@ -12,11 +12,12 @@ namespace BOP3___Task1
 {
 	public partial class ModifyCustomer : Form
 	{
-		private int _rowIndex;
+		// private int _rowIndex;
 		public ModifyCustomer(int modCustomerIndex)
 		{
 			InitializeComponent();
-			_rowIndex = modCustomerIndex;
+			//_rowIndex = modCustomerIndex;
+			//idBox.Text = modCustomerIndex;
 		}
 
 		private void SaveButton_Click(object sender, EventArgs e)

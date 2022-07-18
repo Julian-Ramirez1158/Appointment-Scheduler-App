@@ -82,7 +82,12 @@ namespace BOP3___Task1
             conn.Close();
         }
 
-        public static int updateID (string schema, string _id)
+        public static void modifyCustomer (int customerId)
+        {
+
+        }
+
+        public static int updateID(string schema, string _id)
         {
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
@@ -180,13 +185,52 @@ namespace BOP3___Task1
 
             conn.Open();
             MySqlCommand command = conn.CreateCommand();
+
+            // Do query to get address from cust record
+            string query1 = $"SELECT addressId FROM customer WHERE customerId = {customerId}";
+            MySqlCommand command1 = new MySqlCommand(query1, conn);
+            int selectedAddress; 
+            using (MySqlDataReader dataReader = command1.ExecuteReader())
+            {
+                dataReader.Read();                                
+                selectedAddress =  Convert.ToInt32(dataReader[0]); 
+            }
+
+            // Do query to get city from address record
+            string query2 = $"SELECT cityId FROM address WHERE addressId = {selectedAddress}";
+            command1 = new MySqlCommand(query2, conn);
+            int selectedCity;
+            using (MySqlDataReader dataReader = command1.ExecuteReader())
+            {
+                dataReader.Read();
+                selectedCity = Convert.ToInt32(dataReader[0]);
+            }
+
+            // Do query to get country from city record
+            string query3 = $"SELECT countryId FROM city WHERE cityId = {selectedCity}";
+            command1 = new MySqlCommand(query3, conn);
+            int selectedCountry;
+            using (MySqlDataReader dataReader = command1.ExecuteReader())
+            {
+                dataReader.Read();
+                selectedCountry = Convert.ToInt32(dataReader[0]);
+            }
+
+            // command.CommandText to delete country record
+            // command.CommandText to delete city record
+            // command.CommandText to delete address record
             command.CommandText = $"DELETE FROM customer WHERE customerId = {customerId}";
-            command.Parameters.AddWithValue($"{customerId}", customerId);
+            // command.Parameters.AddWithValue($"{customerId}", customerId);
+            command.ExecuteNonQuery();
+            command.CommandText = $"DELETE FROM address WHERE addressId = {selectedAddress}";
+            command.ExecuteNonQuery();
+            command.CommandText = $"DELETE FROM city WHERE cityId = {selectedCity}";
+            command.ExecuteNonQuery();
+            command.CommandText = $"DELETE FROM country WHERE countryId = {selectedCountry}";
             command.ExecuteNonQuery();
 
             conn.Close();
-
-            
+  
 
             return true;
         }
