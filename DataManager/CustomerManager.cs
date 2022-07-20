@@ -58,7 +58,7 @@ namespace BOP3___Task1
             return sqlFormat;
         }
 
-        public static DateTime dateTime ()
+        public static DateTime dateTime()
         {
             return DateTime.Now.ToUniversalTime();
         }
@@ -82,8 +82,68 @@ namespace BOP3___Task1
             conn.Close();
         }
 
-        public static void modifyCustomer (int customerId)
+        public static void modCustomer(int customerId, string customerName, string customerAddress, string customerCity, string customerCountry, 
+                                        string customerPostalCode, string customerPhoneNumber)
         {
+            MySqlConnection conn = new MySqlConnection(connString);
+
+            conn.Open();
+            MySqlCommand command = conn.CreateCommand();
+
+            // Do query to get address from cust record
+            string query1 = $"SELECT addressId FROM customer WHERE customerId = {customerId}";
+            MySqlCommand command1 = new MySqlCommand(query1, conn);
+            int selectedAddressId;
+            using (MySqlDataReader dataReader = command1.ExecuteReader())
+            {
+                dataReader.Read();
+                selectedAddressId = Convert.ToInt32(dataReader[0]);
+            }
+
+            // Do query to get city from address record
+            string query2 = $"SELECT cityId FROM address WHERE addressId = {selectedAddressId}";
+            command1 = new MySqlCommand(query2, conn);
+            int selectedCityId;
+            using (MySqlDataReader dataReader = command1.ExecuteReader())
+            {
+                dataReader.Read();
+                selectedCityId = Convert.ToInt32(dataReader[0]);
+            }
+
+            // Do query to get country from city record
+            string query3 = $"SELECT countryId FROM city WHERE cityId = {selectedCityId}";
+            command1 = new MySqlCommand(query3, conn);
+            int selectedCountryId;
+            using (MySqlDataReader dataReader = command1.ExecuteReader())
+            {
+                dataReader.Read();
+                selectedCountryId = Convert.ToInt32(dataReader[0]);
+            }
+
+            // Update queries
+
+            // Customer update query
+            command.CommandText = $"UPDATE customer SET customerName = '{customerName}'" +
+                $", lastUpdate = '{sqlDate(dateTime())}', lastUpdateBy = '{UserManager.PullCurrentUserName()}' WHERE customerId = {customerId} ";
+            command.ExecuteNonQuery();
+
+            // Address update query
+            command.CommandText = $"UPDATE address SET address = '{customerAddress}', postalCode = '{customerPostalCode}', " +
+                $"phone = '{customerPhoneNumber}', lastUpdate = '{sqlDate(dateTime())}', lastUpdateBy = '{UserManager.PullCurrentUserName()}' " +
+                $"WHERE addressId = {selectedAddressId}";
+            command.ExecuteNonQuery();
+
+            // City update query
+            command.CommandText =  $"UPDATE city SET city = '{customerCity}', lastUpdate = '{sqlDate(dateTime())}', " +
+                $"lastUpdateBy = '{UserManager.PullCurrentUserName()}' WHERE cityId = {selectedCityId}";
+            command.ExecuteNonQuery();
+
+            // Country update query
+            command.CommandText = $"UPDATE country SET country = '{customerCountry}', lastUpdate = '{sqlDate(dateTime())}', " +
+                $"lastUpdateBy = '{UserManager.PullCurrentUserName()}' WHERE countryId = {selectedCountryId}";
+            command.ExecuteNonQuery();
+
+            conn.Close();
 
         }
 
@@ -230,6 +290,10 @@ namespace BOP3___Task1
             command.ExecuteNonQuery();
 
             conn.Close();
+
+            //TO DO
+            // Delete appointments associated with customers
+            
   
 
             return true;

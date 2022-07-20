@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +13,26 @@ namespace BOP3___Task1
 {
 	public partial class ModifyCustomer : Form
 	{
-		// private int _rowIndex;
-		public ModifyCustomer(int modCustomerIndex)
+		public static MySqlConnection _conn;
+		public ModifyCustomer(int modCustomerIndex, string custName, string custAddress, string custCity, 
+								string custCountry, string custPostalCode, string custPhoneNumber)
 		{
 			InitializeComponent();
-			//_rowIndex = modCustomerIndex;
-			//idBox.Text = modCustomerIndex;
+
+			idBox.Text = modCustomerIndex.ToString();
+			nameBox.Text = custName;
+			addressBox.Text = custAddress;
+			cityBox.Text = custCity;
+			countryBox.Text = custCountry;
+			postalCodeBox.Text = custPostalCode;
+			phoneNumberBox.Text = custPhoneNumber;
+
 		}
 
 		private void SaveButton_Click(object sender, EventArgs e)
 		{
+
+			
 
 			if ((string.IsNullOrEmpty(nameBox.Text) || string.IsNullOrWhiteSpace(nameBox.Text)) ||
 				(string.IsNullOrEmpty(addressBox.Text) || string.IsNullOrWhiteSpace(addressBox.Text)) ||
@@ -35,7 +46,8 @@ namespace BOP3___Task1
 			}
 			else
             {
-				
+				CustomerManager.modCustomer(Convert.ToInt32(idBox.Text), nameBox.Text, addressBox.Text, cityBox.Text, countryBox.Text, 
+											postalCodeBox.Text, phoneNumberBox.Text);
             }
 
 
@@ -43,6 +55,8 @@ namespace BOP3___Task1
 
 
 			this.Hide();
+			new Main(_conn).ShowDialog();
+			this.Show();
 		}
 
 

@@ -73,17 +73,23 @@ namespace BOP3___Task1
 			// check for row selection and null values
 			if (dgvCustomers.CurrentRow == null || !dgvCustomers.CurrentRow.Selected)
 			{
-				MessageBox.Show("Nothing was selected! Please select a customer to delete.");
+				MessageBox.Show("Nothing was selected! Please select a customer to modify.");
 				return;
 			}
-			
+
 
 			int selectedCustomerIndex = Convert.ToInt32(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[0].Value);
+			string custName = Convert.ToString(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[1].Value);
+			string custAddress = Convert.ToString(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[2].Value);
+			string custCity = Convert.ToString(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[3].Value);
+			string custCountry = Convert.ToString(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[4].Value);
+			string custPostalCode = Convert.ToString(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[5].Value);
+			string custPhoneNumber = Convert.ToString(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[6].Value);
 
 			if (selectedCustomerIndex != -1)
             {
 				this.Hide();
-				ModifyCustomer modCustomer = new ModifyCustomer(selectedCustomerIndex);
+				ModifyCustomer modCustomer = new ModifyCustomer(selectedCustomerIndex, custName, custAddress, custCity, custCountry, custPostalCode, custPhoneNumber);
 				modCustomer.ShowDialog();
 				this.Show();
 			}
