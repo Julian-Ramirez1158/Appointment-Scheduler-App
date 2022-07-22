@@ -12,7 +12,8 @@ namespace BOP3___Task1.DataManager
     {
         private const string connString = "Host=localhost;Port=3306;Database=client_schedule;Username=sqlUser;Password=Passw0rd!";
 
-        public DataTable getAppointmentData()
+
+        public DataTable getAppointmentData(int customerID)
         {
             MySqlConnection conn = new MySqlConnection(connString);
 
@@ -26,13 +27,13 @@ namespace BOP3___Task1.DataManager
             if (!allAppointments.Columns.Contains("Type")) { allAppointments.Columns.Add("Type", typeof(string)); }
             if (!allAppointments.Columns.Contains("Start")) { allAppointments.Columns.Add("Start", typeof(string)); }
             if (!allAppointments.Columns.Contains("End")) { allAppointments.Columns.Add("End", typeof(string)); }
-            if (!allAppointments.Columns.Contains("Created")) { allAppointments.Columns.Add("Created", typeof(string)); }
-            if (!allAppointments.Columns.Contains("Created By")) { allAppointments.Columns.Add("Created By", typeof(string)); }
 
 
             conn.Open();
 
-            string query = "SELECT appointmentId, customerId, userId, title, description, location , type, start, end, createDate, createdBy FROM appointment;";
+            string query = $"SELECT appointmentId, customerId, userId, description, location , type, start, end FROM appointment WHERE customerId = {customerID};";
+
+            // Add where clause to select customer from customer datagrid
 
             MySqlCommand command1 = new MySqlCommand(query, conn);
             using (MySqlDataReader dataReader = command1.ExecuteReader())
@@ -42,7 +43,7 @@ namespace BOP3___Task1.DataManager
                     allAppointments.Rows.Add(
                         dataReader["appointmentId"], dataReader["customerId"], dataReader["userId"],
                         dataReader["description"], dataReader["location"], dataReader["type"],
-                        dataReader["start"], dataReader["end"], dataReader["createDate"], dataReader["createdBy"]);
+                        dataReader["start"], dataReader["end"]);
                 }
             }
 

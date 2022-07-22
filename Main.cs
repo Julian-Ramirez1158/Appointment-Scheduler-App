@@ -16,6 +16,7 @@ namespace BOP3___Task1
 	public partial class Main : Form
 	{
 		public static MySqlConnection _conn;
+		public static AppointmentManager appointments;
 		public Main(MySqlConnection conn)
 		{
 			InitializeComponent();
@@ -38,9 +39,9 @@ namespace BOP3___Task1
 
 
 
-			AppointmentManager appointments = new AppointmentManager();
+			appointments = new AppointmentManager();
 
-			dgvAppointments.DataSource = appointments.getAppointmentData();
+			// dgvAppointments.DataSource = appointments.getAppointmentData();
 
 			// selects full row in data grid
 			dgvAppointments.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -51,6 +52,22 @@ namespace BOP3___Task1
 
 			// remove blank bottom row
 			dgvAppointments.AllowUserToAddRows = false;
+
+		}
+
+		private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+			if (!dgvCustomers.CurrentRow.Selected)
+			{
+				MessageBox.Show("Nothing was selected! Please select a customer to schedule.");
+				return;
+			}
+
+			int selectedCustomer = Convert.ToInt32(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[0].Value);
+
+			dgvAppointments.DataSource = appointments.getAppointmentData(selectedCustomer);
+
 
 		}
 
@@ -123,9 +140,21 @@ namespace BOP3___Task1
 		private void AddAppointmentButton_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+
+			if (dgvCustomers.CurrentRow == null || !dgvCustomers.CurrentRow.Selected)
+			{
+				MessageBox.Show("Nothing was selected! Please select a customer to delete.");
+				return;
+			}
+
+			int selectedCustomer = Convert.ToInt32(dgvCustomers.Rows[dgvCustomers.CurrentCell.RowIndex].Cells[0].Value);
+
+
+
 			new AddAppointment().ShowDialog();
 			this.Show();
 		}
+
 
 		private void ModifyAppointmentButton_Click(object sender, EventArgs e)
 		{
@@ -153,5 +182,6 @@ namespace BOP3___Task1
 			dgvAppointments.ClearSelection();
         }
 
+        
     }
 }
